@@ -5,15 +5,19 @@ public class Main {
         task3();
     }
 
-    public static void task1 () {
-        System.out.println("Задача 1");
-        // Пишем код для задачи 1
-        int year = 2021;
+    public static void checkYear(int year) {
         if ((year % 4 == 0 && year % 100 > 0) || (year % 400 == 0)) {
             System.out.println("Год високосный");
         } else {
             System.out.println("Год не високосный");
         }
+    }
+
+    public static void task1 () {
+        System.out.println("Задача 1");
+        // Пишем код для задачи 1
+        int year = 2021;
+        checkYear(year);
     }
 
     public static void task2 () {
