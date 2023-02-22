@@ -42,10 +42,8 @@ public class Main {
         int clientOS = 0;
         determineVersion(clientOS);
     }
-    public static void task3 () {
-        System.out.println("Задача 3");
-        // Пишем код для задачи 3
-        int deliveryDistance = 95;
+
+    public static void determinateDelivery(int deliveryDistance) {
         if (deliveryDistance <= 20) {
             System.out.println("Потребуется дней: 1");
         } else if (deliveryDistance > 20 && deliveryDistance <= 60) {
@@ -55,6 +53,13 @@ public class Main {
         } else {
             System.out.println("Доставки нет");
         }
+    }
+
+    public static void task3 () {
+        System.out.println("Задача 3");
+        // Пишем код для задачи 3
+        int deliveryDistance = 95;
+        determinateDelivery(deliveryDistance);
     }
 }
 
