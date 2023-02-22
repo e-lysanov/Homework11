@@ -1,3 +1,5 @@
+import java.time.LocalDate;
+
 public class Main {
     public static void main(String[] args) {
         task1();
@@ -20,15 +22,11 @@ public class Main {
         checkYear(year);
     }
 
-    public static void task2 () {
-        System.out.println("Задача 2");
-        // Пишем код для задачи 2
-        int clientOS = 1;
-        int clientDeviceYear = 2015;
-        // первый способ
-        if (clientDeviceYear == 2015 && clientOS == 1) {
+    public static void determineVersion(int clientOS) {
+        int clientDeviceYear = LocalDate.now().getYear();
+        if (clientDeviceYear >= 2015 && clientOS == 1) {
             System.out.println("Установите версию приложения для Android по ссылке");
-        } else if (clientDeviceYear == 2015 && clientOS == 0) {
+        } else if (clientDeviceYear >= 2015 && clientOS == 0) {
             System.out.println("Установите версию приложения для iOS по ссылке");
         }
         if (clientDeviceYear < 2015 && clientOS == 1) {
@@ -36,6 +34,13 @@ public class Main {
         } else if (clientDeviceYear < 2015 && clientOS == 0){
             System.out.println("Установите облегченную версию приложения для iOS по ссылке");
         }
+    }
+
+    public static void task2 () {
+        System.out.println("Задача 2");
+        // Пишем код для задачи 2
+        int clientOS = 0;
+        determineVersion(clientOS);
     }
     public static void task3 () {
         System.out.println("Задача 3");
